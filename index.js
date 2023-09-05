@@ -98,6 +98,6 @@ if(req.params.page){
 })
 
 app.listen(3000, ()=>{
-	console.log('ta rodando')
+	console.log('ta rodando versao 2023')
 
 })
