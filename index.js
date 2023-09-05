@@ -26,7 +26,8 @@ app.use(bodyParser.json());
 const PostagemModel = new mongoose.Schema({
 	titulo: String,
 	corpo: String,
-	data_post: String
+	data_post: String,
+	autor: String
 })
 
 const Postagem = mongoose.model("Postagem", PostagemModel)
