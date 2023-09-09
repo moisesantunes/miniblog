@@ -1,0 +1,17 @@
+<% layout('boilerplate') -%>
+<%-include("partials/nav") %>
+<section>
+    <article>
+        <header>
+            <h3><%= post.titulo %></h3>
+            <a href="/editar/<%= post._id %>" >Editar post</a>
+        </header>
+        <section>
+            <%= post.corpo %>
+        </section>
+        <br>
+        <footer>
+            <small>Data da postagem  <%= post.data_post.split("-").reverse().join("/") %> | Autor: <%= post.autor %></small>
+        </footer>
+    </article>
+</section>

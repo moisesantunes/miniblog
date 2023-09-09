@@ -1,0 +1,19 @@
+<% layout('boilerplate') -%>
+<section>
+    <%- include("partials/nav.ejs") %>
+    <br>
+    <% posts.forEach((post)=> {%>
+        <article>
+            <header>
+                <h3><%= post.titulo %></h3>
+            </header>
+            <section>
+                <%= post.corpo.substring(0, 30)+"..." %>
+                <small><a href="/post/<%= post._id %>">ver +</a></small>
+            </section>
+            <footer>
+                <small>Data da postagem  <%= post.data_post.split("-").reverse().join("/") %> | Autor: <%= post.autor %></small>
+            </footer>
+        </article>
+  <% })%>
+</section>

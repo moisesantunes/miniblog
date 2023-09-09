@@ -1,17 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Nova postagen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
--->
-    <style>
-    </style>
-</head>
-<body>
-<h1>Formulario</h1>
-</body>
-</html>
+<% layout('boilerplate') -%>
+<%- include("partials/nav") %>
+<section>
+    <h1>Nova Postagem</h1>
+
+    <form method="post" action="/novo">
+        <label for="titulo">Titulo: </label>
+        <input id="titulo" type="text" name="titulo">
+        <br>
+        <label for="corpo">Corpo: </label>
+        <textarea id="corpo" rows="5" cols="30" name="corpo"></textarea>
+        <br>
+        <label for="autor">Autor: </label>
+        <input type="text" id="autor" name="autor">
+       <br> 
+        <label for="data_post">Data da postagem: </label>
+        <input type="date" name="data_post" id="data_post">
 
 
+        <br>
+        <button>Salvar</button>
+
+    </form>
+
+
+    <script>
+    let data =new Date()
+  //  alert(data.toLocaleDateString().split("/").reverse().join("-"))
+   document.getElementById("data_post").value = data.toLocaleDateString().split("/").reverse().join("-")
+       
+   // document.getElementById("data_post").valueAsDate= data
+        
+    </script>
+</section>

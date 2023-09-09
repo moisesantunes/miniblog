@@ -1,0 +1,29 @@
+<% layout('boilerplate') -%>
+<section>
+    <h1>Formulario</h1>
+
+    <form method="post" action="/novo">
+        <label for="titulo">Titulo: </label>
+        <input id="titulo" type="text" name="titulo" value="<%= post.titulo %>">
+        <br>
+        <label for="corpo">Corpo: </label>
+        <textarea id="corpo" rows="5" cols="30" name="corpo" ><%= post.corpo %></textarea>
+        <br>
+        <label for="autor">Autor: </label>
+        <input type="text" id="autor" name="autor" value="<%= post.autor %>" readonly="true">
+       <br> 
+        <label for="data_post">Data da postagem: </label>
+        <input type="date" name="data_post" id="data_post" value="<%= post.data_post %>">
+
+
+        <br>
+        <button>Salvar</button>
+
+    </form>
+
+
+    <script>
+  //  document.getElementById("data_post").valueAsDate= new Date()
+        
+    </script>
+</section>
